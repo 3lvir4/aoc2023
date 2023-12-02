@@ -13,7 +13,7 @@ defmodule Day1 do
     }  
   end
 
-  def handle(data_path) do
+  defp handle(data_path) do
     File.stream!(data_path)
     |> Enum.filter(&String.trim(&1) != "")
     |> Enum.reduce(0, &proc_line/2)
@@ -30,7 +30,7 @@ defmodule Day1 do
     end
   end
 
-  def extract_digits(str, i \\ 0) do
+  defp extract_digits(str, i \\ 0) do
     case String.at(str, i) do
       nil -> nil
       c ->
@@ -47,7 +47,7 @@ defmodule Day1 do
     String.to_integer(tmp)
   end
   
-  def match_str_to_dgt(str) do
+  defp match_str_to_dgt(str) do
     map = str_digit_map()
     Map.keys(map)
     |> Enum.find(fn sdgt -> String.starts_with?(str, Atom.to_string(sdgt)) end)
