@@ -8,7 +8,7 @@ defmodule Day2 do
     |> Enum.reduce(0, &proc_record/2)
   end
 
-  def proc_record(l, acc) do
+  defp proc_record(l, acc) do
     {id, sets} = id_data_pair(l)
     impossible = sets
     |> Enum.any?(fn set -> is_impossible_set(set) end)
