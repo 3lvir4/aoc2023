@@ -8,6 +8,36 @@ defmodule Day2 do
     |> Enum.reduce(0, &proc_record/2)
   end
 
+  def part_2(path) do
+    File.stream!(path)
+    |> Enum.reduce(0, &sum_powers_each/2)
+  end
+
+  defp sum_powers_each(l, acc) do
+    [_, sets_str] = String.split(l, ": ")
+    sets_str
+    |> arrange_sets()
+    |> Enum.reduce(%{red: 0, green: 0, blue: 0}, &max_freqs/2)
+    |> Map.values()
+    |> Enum.product()
+    |> Kernel.+(acc)
+  end
+
+  defp arrange_sets(str) do
+    str
+    |> String.split([", ", "; "])
+    |> Enum.map(fn s -> String.split(s) |> List.to_tuple end)
+    |> Enum.map(fn {count, clr} -> {String.to_integer(count), String.to_atom(clr)} end)
+  end
+
+  defp max_freqs({count, clr}, acc) do
+    if Map.get(acc, clr) < count do
+      Map.update!(acc, clr, fn _ -> count end)
+    else
+      acc
+    end
+  end
+
   defp proc_record(l, acc) do
     {id, sets} = id_data_pair(l)
     impossible = sets
@@ -44,5 +74,5 @@ end
 
 
 Path.expand("~/dev/advent_of_code/aoc2023/inputs/day2")
-|> Day2.part_1()
+|> Day2.part_2()
 |> IO.puts()
