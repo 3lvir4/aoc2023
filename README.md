@@ -12,6 +12,6 @@ Day 2:
 - Part 2 was easier than part 1. Maybe biased because of the fumbling I mentioned.
 
 Day 3:
-- Learnt the existence of Regex.scan
+- Learnt the existence of `&Regex.scan/3`
 - Wasn't enough pragmatic at first trying to detect a symbol by using regex lol
-- Regex.scan is bonkers
+- `&Regex.scan/3` is bonkers
