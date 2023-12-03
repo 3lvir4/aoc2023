@@ -10,9 +10,7 @@ defmodule Day3 do
     |> (fn {results, _} -> Enum.sum(results) end).()
   end
 
-  def part_numbers(ls, acc) do
-    {results, prev} = acc
-    [curr | next] = ls
+  def part_numbers([curr, next], {results, prev}) do
     found = Regex.scan(~r/\d+/, curr, return: :index)
     |> Enum.filter(fn [{start, count}] -> 
       offset = count + min(0, start - 1)
