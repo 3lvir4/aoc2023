@@ -15,3 +15,8 @@ Day 3:
 - Learnt the existence of `&Regex.scan/3`
 - Wasn't enough pragmatic at first trying to detect a symbol by using regex lol
 - `&Regex.scan/3` is bonkers
+
+Day 4: Almost though I would need to use some advanced struct on the 2nd part but it turned out
+as easy as the 1st part.
+
+
