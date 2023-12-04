@@ -41,7 +41,7 @@ defmodule Day2 do
   defp proc_record(l, acc) do
     {id, sets} = id_data_pair(l)
     impossible = sets
-    |> Enum.any?(fn set -> is_impossible_set(set) end)
+    |> Enum.any?(fn set -> impossible_set?(set) end)
     if impossible do
       acc
     else
@@ -49,7 +49,7 @@ defmodule Day2 do
     end
   end
 
-  defp is_impossible_set(set) do
+  defp impossible_set?(set) do
     limits = limit_data()
     set
     |> Enum.reduce(%{red: 0, green: 0, blue: 0}, &get_counts/2)
