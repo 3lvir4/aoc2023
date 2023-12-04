@@ -3,6 +3,31 @@ defmodule Day4 do
     File.stream!(path)
     |> Enum.reduce(0, &sum_points/2)
   end
+  
+  @doc """
+    schcard schema := {{winning, player}, copies}
+  """
+  def part_2(path) do
+    File.stream!(path)
+    |> Enum.map(fn l -> {parse_card(l), 1} end)
+    |> proc_schcards(0)
+  end
+
+  defp proc_schcards([], total), do: total;
+  
+  defp proc_schcards([curr | rest], total) do 
+    {{winning, player}, copies} = curr
+
+    case length(winning -- (winning -- player)) do
+      0 -> proc_schcards(rest, total + copies)
+      n ->
+        {copied, skip} = Enum.split(rest, n)
+        rest = copied
+        |> Enum.map(fn {b, c} -> {b, c + copies} end)
+        |> Enum.concat(skip)
+        proc_schcards(rest, total + copies)
+    end
+  end
 
   defp sum_points(l, acc) do
     {winning, player} = parse_card(l)
@@ -28,5 +53,5 @@ defmodule Day4 do
 end
 
 Path.expand("~/dev/advent_of_code/aoc2023/inputs/day4")
-|> Day4.part_1()
+|> Day4.part_2()
 |> IO.puts()
