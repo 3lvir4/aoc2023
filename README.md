@@ -19,4 +19,9 @@ Day 3:
 Day 4: Almost though I would need to use some advanced struct on the 2nd part but it turned out
 as easy as the 1st part.
 
+Day 5:
+- Tried firstly with a brute force approach which was just the worst performance solution ever
+(didn't expected it to be the opposite, it still was funny tho)
+- So for the first part, I used my first approach and built an alternative  solution which
+was way better performance wise
 
