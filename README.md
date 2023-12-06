@@ -24,4 +24,8 @@ Day 5:
 (didn't expected it to be the opposite, it still was funny tho)
 - So for the first part, I used my first approach and built an alternative  solution which
 was way better performance wise
+- The second part was easier but took time to decide if i was going for full interval manipulations
+or just turning on my computer for a whole weekday and wait
+- My favorite day yet.
+
 

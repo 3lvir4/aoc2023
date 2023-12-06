@@ -131,5 +131,5 @@ defmodule Day5 do
 end
 
 Path.expand("~/dev/advent_of_code/aoc2023/inputs/day5")
-|> Day5.part_1_not_killing_computer()
+|> Day5.part_2()
 |> IO.inspect()
