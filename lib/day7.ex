@@ -25,7 +25,8 @@ defmodule Day7 do
         {result, _} = Enum.reduce_while(h1, {true, h2}, fn h1_c, { res, [h2_c | h2_tl] } -> 
           h1_cval = card_to_val(h1_c)
           h2_cval = card_to_val(h2_c)
-          cond do              h1_cval < h2_cval -> {:halt, {res, []}}
+          cond do 
+            h1_cval < h2_cval -> {:halt, {res, []}}
             h1_cval > h2_cval -> {:halt, {false, []}}
             h1_cval == h2_cval -> {:cont, {res, h2_tl}}
           end
