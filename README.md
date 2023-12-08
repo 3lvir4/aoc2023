@@ -30,3 +30,7 @@ or just turning on my computer for a whole weekday and wait.
 
 Day 6: Too easy.
 
+Day 7:
+- Could have been fun If I didn't brute forced it.
+- Maybe will try to redo both parts in a more efficient way even tho it didn't took more than 1.5s on average
+to give the answer
