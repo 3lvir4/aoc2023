@@ -36,3 +36,6 @@ Day 7:
 to give the answer.
 
 Day 8: Heavy sweat on part 2 but god bless debug print. Huge luck on this one lol.
+
+Day 9: Too easy + lazy.
+
