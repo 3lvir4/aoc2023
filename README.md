@@ -33,4 +33,6 @@ Day 6: Too easy.
 Day 7:
 - Could have been fun If I didn't brute forced it.
 - Maybe will try to redo both parts in a more efficient way even tho it didn't took more than 1.5s on average
-to give the answer
+to give the answer.
+
+Day 8: Heavy sweat on part 2 but god bless debug print. Huge luck on this one lol.
