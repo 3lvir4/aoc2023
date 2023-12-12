@@ -39,3 +39,14 @@ Day 8: Heavy sweat on part 2 but god bless debug print. Huge luck on this one lo
 
 Day 9: Too easy + lazy.
 
+Day 10:
+- Finished first part although I am not sure if it was the best way to do it but anyway.
+- Didn't finished second part yet.
+- First time of using a special module inside a day module. Funnily enough, it was reusable the next day.
+
+Day 11:
+- Was easy, learnt at last how to manage modules calls on the fly, because using modules which are outside
+of the current file doesn't get compiled along the current executed script.
+- Might not be the best performance wise but was too tired because of day 10. Didn't want to optimize. Was enough.
+
+
