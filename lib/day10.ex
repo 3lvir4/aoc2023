@@ -20,7 +20,7 @@ defmodule Day10 do
     end
 
     @spec equal?(t(), t()) :: boolean()
-    def equals?({x1, y1}, {x2, y2}) when is_point(x1, y1) and is_point(x2, y2) do
+    def equal?({x1, y1}, {x2, y2}) when is_point(x1, y1) and is_point(x2, y2) do
       x1 == x2 and y1 == y2
     end
   end
