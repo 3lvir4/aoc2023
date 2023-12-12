@@ -13,7 +13,7 @@ defmodule Day1 do
     }  
   end
 
-  defp handle(data_path) do
+  def handle(data_path) do
     File.stream!(data_path)
     |> Enum.filter(&String.trim(&1) != "")
     |> Enum.reduce(0, &proc_line/2)

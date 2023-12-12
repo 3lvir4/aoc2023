@@ -2,14 +2,14 @@ defmodule Day5 do
   @doc """
     Do not run this unless you want to burn your computer
   """
-  def part_1_original(path) do
+  def part_1_killing_computer(path) do
     File.read!(path)
     |> String.split(["\n", " map:"], trim: true)
     |> parse_input()
     |> lowest_location()
   end
 
-  def part_1_not_killing_computer(path) do
+  def part_1(path) do
     File.read!(path)
     |> String.split(["\n", " map:"], trim: true)
     |> parse()
@@ -131,5 +131,5 @@ defmodule Day5 do
 end
 
 Path.expand("~/dev/advent_of_code/aoc2023/inputs/day5")
-|> Day5.part_2()
+|> Day5.part_1()
 |> IO.inspect()
