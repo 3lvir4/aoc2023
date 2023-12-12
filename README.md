@@ -49,4 +49,7 @@ Day 11:
 of the current file doesn't get compiled along the current executed script.
 - Might not be the best performance wise but was too tired because of day 10. Didn't want to optimize. Was enough.
 
+Day 10 bis:
+- At last, completed second part, with a cool head. Wasn't that bad, I am pretty sure I just made the dumb mistake
+of filtering out the points which weren't poiting to a dot char. Might be why It was wrong in the first place.
 

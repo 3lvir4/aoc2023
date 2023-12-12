@@ -17,7 +17,7 @@ defmodule Day11 do
     g_points
     |> possible_pairs()
     |> Enum.reduce(0, fn {a, b}, acc ->
-      if Point.eq(a, b) do
+      if Point.equals(a, b) do
         acc
       else
         acc + Point.manhattan_distance(a, b)
