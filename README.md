@@ -56,4 +56,5 @@ of filtering out the points which weren't poiting to a dot char. Might be why It
 Day 12:
 - Discovered Erlang Term Storage (ETS) and oh lord it is so great. For part 2 I initially just used a Map as a cache
 but it was way too slow. With ETS, part_2 runned faster than part_1 (without cache). Very cool.
+- Not yet fully confortable with string pattern matching, so I went the list way. And, effectively, it could have been tighter and maybe more performant to do it in this manner.
 
