@@ -53,3 +53,7 @@ Day 10 bis:
 - At last, completed second part, with a cool head. Wasn't that bad, I am pretty sure I just made the dumb mistake
 of filtering out the points which weren't poiting to a dot char. Might be why It was wrong in the first place.
 
+Day 12:
+- Discovered Erlang Term Storage (ETS) and oh lord it is so great. For part 2 I initially just used a Map as a cache
+but it was way too slow. With ETS, part_2 runned faster than part_1 (without cache). Very cool.
+
