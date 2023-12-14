@@ -57,3 +57,5 @@ Day 12:
 - Discovered Erlang Term Storage (ETS) and oh lord it is so great. For part 2 I initially just used a Map as a cache
 but it was way too slow. With ETS, part_2 runned faster than part_1 (without cache). Very cool.
 
+Day 13: Done it using bit operations even tho I dont think it was the best for elixir, it was funny to do.
+
