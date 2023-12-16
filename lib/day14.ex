@@ -18,9 +18,7 @@ defmodule Day14 do
     |> parse()
     |> then(fn platform ->
       {i, last_seen, cycled} = find_repeat(platform)
-      IO.puts("out of find_repeat #{i}, #{last_seen}")
       remaining = rem(1_000_000_000 - i, i - last_seen)
-      IO.puts(remaining)
       total_load_cycles(cycled, remaining)
     end)
   end
@@ -176,35 +174,6 @@ defmodule Day14 do
   defp tile_to_atom("O"), do: :round
   defp tile_to_atom("#"), do: :cube
   defp tile_to_atom(_), do: :empty
-
-  defp reverse_parse(platform) do
-    max_x = max_x(platform)
-    max_y = max_y(platform)
-
-    0..max_y
-    |> Enum.reduce([], fn y, lines ->
-      l = 0..max_x
-      |> Enum.reduce([], fn x, line ->
-        c = case Map.get(platform, {x, y}) do
-          :round -> "O"
-          :cube -> "#"
-          :empty -> "."
-        end
-        [c | line]
-      end)
-      |> Enum.reverse()
-      |> Enum.join("")
-      |> then(fn line -> if y != max_y, do: line <> "\n" end)
-      [l | lines]
-    end)
-    |> Enum.reverse()
-    |> Enum.join("")
-  end
-
-  defp render_platform(platform) do
-    IO.puts(reverse_parse(platform))
-    platform
-  end
 end
 
 
