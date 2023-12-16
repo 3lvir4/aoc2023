@@ -60,7 +60,10 @@ but it was way too slow. With ETS, part_2 runned faster than part_1 (without cac
 
 Day 13: Done it using bit operations even tho I dont think it was the best for elixir, it was funny to do.
 
-Day 14: *part 2 still ongoing*
+Day 14:
+- I didn't found it hard until I got bad results in part 2. I searched for more than 4 hours in total while being tired desperately trying to find where it was.
+I was too focused on a "maybe the indexes are going wild" for some reason. Turned out, after some sleep and daybreak, it was just a dumb typo somewhere.
+What I learnt from it: never code when tired.
 
 Day 15: Now this was fun to do. Might be even more fun doing it in C or Rust tho.
 
