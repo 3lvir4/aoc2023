@@ -4,7 +4,7 @@ defmodule Day14 do
   @type platform() :: %{Point.t() => atom()}
 
   def part_1(path) do
-     init_cache()
+     init_maxes()
      File.stream!(path)
      |> parse()
      |> tilt(:n)
@@ -13,7 +13,7 @@ defmodule Day14 do
   end
 
   def part_2(path) do
-    init_cache()
+    init_maxes()
     File.stream!(path)
     |> parse()
     |> then(fn platform ->
@@ -43,8 +43,8 @@ defmodule Day14 do
     end)
   end
 
-  defp init_cache() do
-    :ets.new(:cache, [:set, :private, :named_table])
+  defp init_maxes() do
+    :ets.new(:maxes, [:set, :private, :named_table])
   end
 
   defp total_load({platform, max_y}) do
@@ -135,21 +135,21 @@ defmodule Day14 do
   end    
 
   defp max_x(map) do
-    case :ets.lookup(:cache, :max_x) do
+    case :ets.lookup(:maxes, :max_x) do
       [{_, cached}] -> cached
       [] ->
         res = max_nth(map, 0)
-        :ets.insert(:cache, {:max_x, res})
+        :ets.insert(:maxes, {:max_x, res})
         res
     end
   end
   
   defp max_y(map) do
-    case :ets.lookup(:cache, :max_y) do
+    case :ets.lookup(:maxes, :max_y) do
       [{_, cached}] -> cached
       [] ->
         res = max_nth(map, 1)
-        :ets.insert(:cache, {:max_y, res})
+        :ets.insert(:maxes, {:max_y, res})
         res
     end
   end

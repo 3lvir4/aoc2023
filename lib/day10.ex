@@ -13,6 +13,9 @@ defmodule Day10 do
       {x1 - x2, y1 - y2}
     end
 
+    @spec neg(t()) :: t()
+    def neg({x, y}), do: {-x, -y}
+
     @spec manhattan_distance(t(), t()) :: pos_integer()
     def manhattan_distance({x1, y1}, {x2, y2})
     when is_point(x1, y1) and is_point(x2, y2) do
@@ -41,7 +44,7 @@ defmodule Day10 do
       prev = loop_points |> Enum.find(fn p -> p != next and Point.manhattan_distance(p, start) == 1 end)
       
       ch_start = char_of_start(prev, start, next)
-      {normalize_points(grid, loop_points, ch_start), grid}
+      {normalize_points(grid, loop_points, ch_start), loop_points}
     end)
     |> sum_inside_loop_points()
   end
