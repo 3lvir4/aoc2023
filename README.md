@@ -67,3 +67,5 @@ What I learnt from it: never code when tired.
 
 Day 15: Now this was fun to do. Might be even more fun doing it in C or Rust tho.
 
+Day 16: alcohol -> bad programming && nap -> good programming
+
