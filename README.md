@@ -69,3 +69,5 @@ Day 15: Now this was fun to do. Might be even more fun doing it in C or Rust tho
 
 Day 16: alcohol -> bad programming && nap -> good programming
 
+Day 17: Messy and a bit lazy but it's working. Didn't took the time to refactor. Not a favorite.
+
