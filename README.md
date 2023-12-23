@@ -73,3 +73,5 @@ Day 17: Messy and a bit lazy but it's working. Didn't took the time to refactor.
 
 Day 18: A bit disappointed. I wish it was more than just a change in the parsing.
 
+Day 19: One of my favorite yet. Wished it was a bit more complex tho. My bloated code would have been more reasonnable. A bit messy at the end but working nicely.
+
