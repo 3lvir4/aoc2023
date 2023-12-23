@@ -13,6 +13,9 @@ defmodule Day10 do
       {x1 - x2, y1 - y2}
     end
 
+    @spec scamul(t(), integer()) :: t()
+    def scamul({x, y}, k) when is_point(x, y) and is_integer(k), do: {x * k, y * k}
+
     @spec neg(t()) :: t()
     def neg({x, y}), do: {-x, -y}
 
