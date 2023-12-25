@@ -20,7 +20,7 @@ defmodule Day8 do
     end)
   end
 
-  defp ppcm(a, b) do
+  def ppcm(a, b) do
     max = max(a, b)
     min = min(a, b)
 

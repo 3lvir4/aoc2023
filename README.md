@@ -75,3 +75,6 @@ Day 18: A bit disappointed. I wish it was more than just a change in the parsing
 
 Day 19: One of my favorite yet. Wished it was a bit more complex tho. My bloated code would have been more reasonnable. A bit messy at the end but working nicely.
 
+Day 20: Ok I lied this one is my favorite.
+
+
