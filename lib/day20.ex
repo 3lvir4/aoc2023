@@ -17,11 +17,11 @@ defmodule Day20 do
     @spec enqueue(t(), any()) :: t()
     def enqueue(queue, value), do: :queue.in(value, queue)
 
-    @spec dequeue(t(), any()) :: {any(), t()} | nil
+    @spec dequeue(t(), any()) :: {any(), t()}
     def dequeue(queue, default \\ nil) do
       case :queue.out(queue) do
         {{:value, value}, q} -> {value, q}
-        {:empty, _q} -> default
+        {:empty, q} -> {default, q}
       end
     end
 
